@@ -6523,6 +6523,22 @@ version = "0.1.50"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a76673446eba2d1011f0dbc3b8668984f8b1ca2754b05b9c2bcd27d02ad73aa3"
 dependencies = [
+ "anyhow",
+ "async-trait",
+ "futures",
+ "libc",
+ "serde",
+ "serde_json",
+ "tokio",
+ "tracing",
+ "url",
+]
+
+[[package]]
+name = "mcp-core"
+version = "0.1.50"
+source = "git+https://github.com/pupplecat/mcp-core.git?branch=context#7687cb083db3d5e981e6d3ee0e6f90ee473ce6fc"
+dependencies = [
  "actix-web",
  "anyhow",
  "async-trait",
@@ -6541,12 +6557,11 @@ dependencies = [
 [[package]]
 name = "mcp-core-macros"
 version = "0.1.30"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "83ee80a2f496327e817b90f538b2930dd82c1a54ca253ddd375ee028613495d1"
+source = "git+https://github.com/pupplecat/mcp-core.git?branch=context#7687cb083db3d5e981e6d3ee0e6f90ee473ce6fc"
 dependencies = [
  "async-trait",
  "convert_case 0.6.0",
- "mcp-core",
+ "mcp-core 0.1.50 (registry+https://github.com/rust-lang/crates.io-index)",
  "proc-macro2",
  "quote",
  "schemars",
@@ -8655,7 +8670,7 @@ dependencies = [
  "futures",
  "glob",
  "lopdf",
- "mcp-core",
+ "mcp-core 0.1.50 (git+https://github.com/pupplecat/mcp-core.git?branch=context)",
  "mcp-core-macros",
  "mime_guess",
  "ordered-float",
